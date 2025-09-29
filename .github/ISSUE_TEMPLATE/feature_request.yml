@@ -1,0 +1,176 @@
+name: Feature Request
+description: Suggest a new feature or enhancement for anon-infer-proxy
+title: "[Feature]: "
+labels: ["enhancement", "triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new feature! Please provide as much detail as possible to help us understand your request.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Feature Summary
+      description: A brief summary of the feature you'd like to see
+      placeholder: Summarize your feature request in 1-2 sentences...
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: What problem does this feature solve? What's your use case?
+      placeholder: |
+        I'm trying to do X but currently I have to...
+        This is frustrating because...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: How would you like this feature to work?
+      placeholder: |
+        I would like to be able to...
+        This could work by...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: What alternatives have you considered?
+      placeholder: |
+        I considered doing X but...
+        Alternative Y doesn't work because...
+    validations:
+      required: false
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Feature Category
+      description: What category does this feature fall into?
+      options:
+        - Core Anonymization
+        - Token Detection
+        - Storage Backend
+        - Security Enhancement
+        - Performance Improvement
+        - API Enhancement
+        - Documentation
+        - Testing
+        - DevOps/Infrastructure
+        - Integration (OpenAI, vLLM, etc.)
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this feature to you?
+      options:
+        - Low - Nice to have
+        - Medium - Would be helpful
+        - High - Important for my use case
+        - Critical - Blocking my use case
+    validations:
+      required: true
+
+  - type: textarea
+    id: implementation
+    attributes:
+      label: Implementation Ideas
+      description: Do you have ideas about how this could be implemented?
+      placeholder: |
+        This could be implemented by...
+        It might require changes to...
+        The API could look like...
+    validations:
+      required: false
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Code Examples
+      description: Provide examples of how you'd like to use this feature
+      render: typescript
+      placeholder: |
+        // Example of how the new feature would be used
+        const engine = createAnonEngine({
+          newFeature: true,
+          newOption: 'value'
+        });
+        
+        const result = await engine.newMethod('input');
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: compatibility
+    attributes:
+      label: Compatibility Considerations
+      description: What should we consider regarding compatibility?
+      options:
+        - label: This feature should be backward compatible
+        - label: Breaking changes are acceptable for this feature
+        - label: This feature should work with all storage backends
+        - label: This feature should work with all anonymization strategies
+        - label: This feature needs new configuration options
+
+  - type: checkboxes
+    id: security
+    attributes:
+      label: Security Considerations
+      description: Does this feature have security implications?
+      options:
+        - label: This feature involves handling sensitive data
+        - label: This feature affects cryptographic operations
+        - label: This feature requires new security controls
+        - label: This feature could impact data privacy
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any additional information that would be helpful
+      placeholder: |
+        References to similar features...
+        Links to documentation...
+        Related issues...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution
+      description: Are you interested in contributing to this feature?
+      options:
+        - label: I would be willing to implement this feature
+        - label: I would be willing to help test this feature
+        - label: I would be willing to help with documentation
+        - label: I would like to collaborate on the design
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      description: Please confirm the following
+      options:
+        - label: I have searched existing issues to ensure this feature hasn't been requested already
+          required: true
+        - label: I have checked the documentation to see if this feature already exists
+          required: true
+        - label: I have provided enough detail for the maintainers to understand the request
+          required: true
+        - label: I understand that feature requests are prioritized based on community interest and maintainer capacity
+          required: true

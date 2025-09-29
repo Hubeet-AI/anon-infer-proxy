@@ -1,0 +1,165 @@
+name: Security Issue
+description: Report a security vulnerability (PLEASE READ SECURITY POLICY FIRST)
+title: "[Security]: "
+labels: ["security", "urgent"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ⚠️ **IMPORTANT SECURITY NOTICE** ⚠️
+        
+        **For responsible disclosure of security vulnerabilities, please DO NOT create a public issue.**
+        
+        Instead, please email security@hubeet.com with the details.
+        
+        Only use this template for:
+        - Security-related questions
+        - General security discussions  
+        - Non-sensitive security improvements
+        
+        **If you believe you've found a vulnerability that could be exploited, please email us directly.**
+
+  - type: checkboxes
+    id: confirm-not-vulnerability
+    attributes:
+      label: This is NOT a security vulnerability
+      description: Please confirm this is not a security vulnerability
+      options:
+        - label: I confirm this is NOT a security vulnerability that could be exploited
+          required: true
+        - label: I understand that actual vulnerabilities should be reported via email to security@hubeet.com
+          required: true
+
+  - type: dropdown
+    id: security-type
+    attributes:
+      label: Security Issue Type
+      description: What type of security-related issue is this?
+      options:
+        - Security Question
+        - Security Enhancement Suggestion
+        - Security Documentation Issue
+        - Security Best Practices Discussion
+        - Compliance Question
+        - Audit Finding (Non-Critical)
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe your security-related question or suggestion
+      placeholder: |
+        Please describe your security-related question or suggestion...
+        
+        If this involves code, please provide examples...
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Security Context
+      description: What's the security context or concern?
+      placeholder: |
+        I'm concerned about...
+        This relates to security because...
+        The impact could be...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      description: Which component does this relate to?
+      options:
+        - Anonymization Engine
+        - Token Detection
+        - Cryptographic Functions
+        - Storage Backend (Memory)
+        - Storage Backend (Vault)
+        - API Interface
+        - Docker Configuration
+        - CI/CD Pipeline
+        - Documentation
+        - Dependencies
+        - Overall Architecture
+    validations:
+      required: false
+
+  - type: textarea
+    id: current-behavior
+    attributes:
+      label: Current Behavior
+      description: How does the current implementation work?
+      placeholder: Currently, the system...
+    validations:
+      required: false
+
+  - type: textarea
+    id: suggested-improvement
+    attributes:
+      label: Suggested Improvement
+      description: What would you like to see improved from a security perspective?
+      placeholder: |
+        I suggest...
+        This would improve security by...
+    validations:
+      required: false
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Any relevant security standards, best practices, or documentation?
+      placeholder: |
+        - OWASP guideline: ...
+        - Security standard: ...
+        - Related documentation: ...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: security-areas
+    attributes:
+      label: Security Areas
+      description: Which security areas does this involve? (Select all that apply)
+      options:
+        - label: Data encryption
+        - label: Access control
+        - label: Authentication
+        - label: Input validation
+        - label: Output sanitization
+        - label: Cryptographic operations
+        - label: Key management
+        - label: Secure storage
+        - label: Network security
+        - label: Container security
+        - label: Dependency security
+        - label: Logging and monitoring
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Additional Information
+      description: Any additional context or information?
+      placeholder: Additional context...
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        
+        **Remember**: If you believe you've discovered an actual security vulnerability:
+        
+        🔒 **Email**: security@hubeet.com  
+        📧 **Include**: Detailed description, steps to reproduce, potential impact  
+        ⏱️ **Response**: We aim to respond within 24 hours  
+        
+        Thank you for helping keep anon-infer-proxy secure! 🛡️

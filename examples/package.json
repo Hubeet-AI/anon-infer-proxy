@@ -1,0 +1,29 @@
+{
+	"name": "anon-infer-proxy-examples",
+	"version": "1.0.0",
+	"description": "Examples and integrations for anon-infer-proxy",
+	"main": "index.js",
+	"scripts": {
+		"openai": "node openai-integration.js",
+		"openai:health": "node openai-integration.js health",
+		"vllm": "node vllm-integration.js",
+		"vllm:health": "node vllm-integration.js health",
+		"python": "python3 python-wrapper.py",
+		"install": "npm install",
+		"test": "npm run openai:health && npm run vllm:health"
+	},
+	"dependencies": {
+		"openai": "^4.20.1"
+	},
+	"devDependencies": {},
+	"keywords": [
+		"anonymization",
+		"openai",
+		"vllm",
+		"llm",
+		"privacy",
+		"examples"
+	],
+	"author": "Hubeet Team",
+	"license": "MIT"
+}

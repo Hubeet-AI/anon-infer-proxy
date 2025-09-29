@@ -1,0 +1,166 @@
+name: Bug Report
+description: Report a bug or issue with anon-infer-proxy
+title: "[Bug]: "
+labels: ["bug", "triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill out the information below to help us understand and reproduce the issue.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of the bug
+      placeholder: Describe what went wrong...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Please provide detailed steps to reproduce the issue
+      placeholder: |
+        1. Initialize engine with config...
+        2. Call anonymize with prompt...
+        3. See error...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What should have happened?
+      placeholder: Describe the expected behavior...
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+      placeholder: Describe what actually happened...
+    validations:
+      required: true
+
+  - type: textarea
+    id: code
+    attributes:
+      label: Code Sample
+      description: Please provide a minimal code example that reproduces the issue
+      render: typescript
+      placeholder: |
+        import { createAnonEngine } from 'anon-infer-proxy';
+        
+        const engine = createAnonEngine({
+          // your config
+        });
+        
+        // code that demonstrates the bug
+    validations:
+      required: false
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      description: What environment are you using?
+      options:
+        - Node.js
+        - Docker
+        - Python wrapper
+        - Other (please specify in additional info)
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: anon-infer-proxy Version
+      description: Which version of anon-infer-proxy are you using?
+      placeholder: "1.0.0"
+    validations:
+      required: true
+
+  - type: input
+    id: node-version
+    attributes:
+      label: Node.js Version
+      description: Which version of Node.js are you using?
+      placeholder: "18.17.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: strategy
+    attributes:
+      label: Anonymization Strategy
+      description: Which anonymization strategy were you using?
+      options:
+        - hash_salt
+        - embeddings
+        - Not applicable
+    validations:
+      required: false
+
+  - type: dropdown
+    id: storage
+    attributes:
+      label: Storage Backend
+      description: Which storage backend were you using?
+      options:
+        - memory
+        - vault
+        - Not applicable
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: security
+    attributes:
+      label: Security Context
+      description: Does this bug have security implications?
+      options:
+        - label: This bug could have security implications
+        - label: This bug involves sensitive data handling
+        - label: This bug affects cryptographic operations
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error Messages / Logs
+      description: Please provide any relevant error messages or log output
+      render: text
+      placeholder: Paste error messages and logs here...
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Information
+      description: Any additional information that might be relevant
+      placeholder: Add any other context about the problem here...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      description: Please confirm the following
+      options:
+        - label: I have searched existing issues to ensure this bug hasn't been reported already
+          required: true
+        - label: I have tested this with the latest version of anon-infer-proxy
+          required: true
+        - label: I have provided enough information to reproduce the issue
+          required: true
+        - label: I understand that issues without proper information may be closed
+          required: true

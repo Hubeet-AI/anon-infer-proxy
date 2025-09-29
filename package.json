@@ -1,0 +1,63 @@
+{
+	"name": "@hubeet-ai/anon-infer-proxy",
+	"version": "1.0.2",
+	"description": "A secure proxy library for anonymizing sensitive tokens in inference requests to external LLM services",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"build": "tsc",
+		"test": "jest",
+		"test:watch": "jest --watch",
+		"test:coverage": "jest --coverage",
+		"dev": "ts-node src/index.ts",
+		"lint": "eslint src/**/*.ts",
+		"lint:fix": "eslint src/**/*.ts --fix",
+		"prepare": "npm run build",
+		"publish:gh": "dotenv -e .env -- npm publish"
+	},
+	"keywords": [
+		"anonymization",
+		"inference",
+		"proxy",
+		"security",
+		"llm",
+		"privacy",
+		"tokenization"
+	],
+	"publishConfig": {
+		"access": "public"
+	},
+	"author": "Hubeet Team",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Hubeet-AI/anon-infer-proxy.git"
+	},
+	"bugs": {
+		"url": "https://github.com/Hubeet-AI/anon-infer-proxy/issues"
+	},
+	"homepage": "https://github.com/Hubeet-AI/anon-infer-proxy#readme",
+	"devDependencies": {
+		"@types/jest": "^29.5.8",
+		"@types/node": "^20.9.0",
+		"@typescript-eslint/eslint-plugin": "^6.11.0",
+		"@typescript-eslint/parser": "^6.11.0",
+		"dotenv-cli": "^10.0.0",
+		"eslint": "^8.54.0",
+		"jest": "^29.7.0",
+		"ts-jest": "^29.1.1",
+		"ts-node": "^10.9.1",
+		"typescript": "^5.2.2"
+	},
+	"dependencies": {
+		"node-vault": "^0.10.2"
+	},
+	"engines": {
+		"node": ">=16.0.0"
+	},
+	"files": [
+		"dist",
+		"README",
+		"LICENSE"
+	]
+}
